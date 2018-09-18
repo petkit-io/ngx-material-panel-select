@@ -1,0 +1,26 @@
+<div
+  class="ngx-mat-panel-select__container"
+  [class.ngx-mat-panel-select__grid-container]="type === 'grid'"
+  [class.ngx-mat-panel-select__list-container]="type === 'list'"
+>
+  <div
+    class="ngx-mat-panel-select__list"
+    *ngFor="let list of data"
+  >
+    <div class="ngx-mat-panel-select__list-title">
+      {{list.title}}
+    </div>
+
+    <div class="ngx-mat-panel-select__item-container">
+      <div
+        class="ngx-mat-panel-select__item"
+        *ngFor="let item of list.children"
+      >
+        <button mat-button (click)="itemClick.emit(item)">
+          <div class="ngx-mat-panel-select__item-text">{{item.text}}</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
