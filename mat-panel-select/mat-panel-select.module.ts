@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule } from '@angular/material';
+
+import { MatButtonModule, MatMenuModule } from '@angular/material';
 
 import { MatPanelSelectComponent } from './mat-panel-select.component';
 
@@ -8,6 +9,7 @@ import { MatPanelSelectComponent } from './mat-panel-select.component';
   imports: [
     CommonModule,
     MatButtonModule,
+    MatMenuModule,
   ],
   declarations: [
     MatPanelSelectComponent,

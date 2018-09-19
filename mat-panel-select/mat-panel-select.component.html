@@ -1,26 +1,37 @@
-<div
-  class="ngx-mat-panel-select__container"
-  [class.ngx-mat-panel-select__grid-container]="type === 'grid'"
-  [class.ngx-mat-panel-select__list-container]="type === 'list'"
->
-  <div
-    class="ngx-mat-panel-select__list"
-    *ngFor="let list of data"
-  >
-    <div class="ngx-mat-panel-select__list-title">
-      {{list.title}}
-    </div>
+<ng-container *ngIf="!dropdown">
+  <ng-container *ngTemplateOutlet="tpl"></ng-container>
+</ng-container>
 
-    <div class="ngx-mat-panel-select__item-container">
-      <div
-        class="ngx-mat-panel-select__item"
-        *ngFor="let item of list.children"
-      >
-        <button mat-button (click)="itemClick.emit(item)">
-          <div class="ngx-mat-panel-select__item-text">{{item.text}}</div>
-        </button>
+<mat-menu class="ngx-mat-panel-select__menu" #panelSelect>
+  <ng-container *ngTemplateOutlet="tpl"></ng-container>
+</mat-menu>
+
+<ng-template #tpl>
+  <div
+    class="ngx-mat-panel-select__container {{containerClass}}"
+    [class.ngx-mat-panel-select__grid-container]="type === 'grid'"
+    [class.ngx-mat-panel-select__list-container]="type === 'list'"
+    [class.ngx-mat-panel-select__dropdown-container]="dropdown === false"
+  >
+    <div
+      class="ngx-mat-panel-select__list"
+      *ngFor="let list of data"
+    >
+      <div class="ngx-mat-panel-select__list-title">
+        {{list.title}}
+      </div>
+
+      <div class="ngx-mat-panel-select__item-container">
+        <div
+          class="ngx-mat-panel-select__item"
+          *ngFor="let item of list.children"
+        >
+          <button mat-button (click)="itemClick.emit(item)">
+            <div class="ngx-mat-panel-select__item-text">{{item.text}}</div>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</ng-template>
 
