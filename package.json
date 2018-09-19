@@ -1,6 +1,6 @@
 {
   "name": "@petkit/ngx-material-panel-select",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Angular material panel select component",
   "main": "index.js",
   "scripts": {
