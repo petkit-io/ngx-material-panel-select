@@ -1,7 +1,7 @@
 # ngx-material-panel-select
 Angular material panel select component
 
-![example](https://github.com/petkit-io/assets/blob/master/ngx-material-panel-select.gif)
+![example](https://raw.githubusercontent.com/petkit-io/assets/master/ngx-material-panel-select.gif)
 
 # Installation
 
