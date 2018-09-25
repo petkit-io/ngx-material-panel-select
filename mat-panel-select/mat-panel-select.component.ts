@@ -11,6 +11,7 @@ import {
 } from '@angular/material';
 import {
   IMatPanelSelectData,
+  IMatPanelSelectItem,
   IMatPanelSelectType,
 } from './mat-panel-select.interface';
 
@@ -22,20 +23,19 @@ import {
   encapsulation: ViewEncapsulation.None,
 })
 export class MatPanelSelectComponent {
-  @Input()
-  data: IMatPanelSelectData[] = [];
-  @Input()
-  type: IMatPanelSelectType = 'list';
-  @Input()
-  dropdown = true;
-  @Input('class')
-  containerClass = '';
+  @Input() data: IMatPanelSelectData[] = [];
+  @Input() type: IMatPanelSelectType = 'list';
+  @Input() dropdown = true;
+  @Input('class') containerClass = '';
+  @Input() active = false;
 
   @Output()
   itemClick: EventEmitter<any> = new EventEmitter<any>();
 
   @ViewChild(MatMenu)
   private _menu: MatMenu;
+
+  _activeItem?: IMatPanelSelectItem;
 
   constructor() { }
 

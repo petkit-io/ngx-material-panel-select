@@ -26,7 +26,11 @@
           class="ngx-mat-panel-select__item"
           *ngFor="let item of list.children"
         >
-          <button mat-button (click)="itemClick.emit(item)">
+          <button
+            mat-button
+            [color]="active && item === _activeItem ? 'primary' : 'default'"
+            (click)="_activeItem = item; itemClick.emit(item)"
+          >
             <div class="ngx-mat-panel-select__item-text">{{item.text}}</div>
           </button>
         </div>
