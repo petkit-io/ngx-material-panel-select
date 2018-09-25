@@ -1,3 +1,13 @@
+<a name="2.0.3"></a>
+## [2.0.3](https://github.com/petkit-io/ngx-material-panel-select/compare/v2.0.2...v2.0.3) (2018-09-25)
+
+
+### Features
+
+* **style:** change item style ([81191c7](https://github.com/petkit-io/ngx-material-panel-select/commit/81191c7))
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/petkit-io/ngx-material-panel-select/compare/v2.0.1...v2.0.2) (2018-09-20)
 
