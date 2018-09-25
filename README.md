@@ -28,24 +28,15 @@ import {
 ## Simple
 
 ```html
-<button mat-raised-button color="primary" [matMenuTriggerFor]="panelSelect">panel select</button>
+<button mat-raised-button color="primary" [matMenuTriggerFor]="panelSelect.menu">panel select</button>
 
-<mat-menu class="panel" #panelSelect>
-  <ngx-mat-panel-select [data]="data"></ngx-mat-panel-select>
-</mat-menu>
-```
-
-```scss
-.panel[class] {
-  max-width: none;
-}
+<ngx-mat-panel-select #panelSelect [data]="data"></ngx-mat-panel-select>
 ```
 
 ```ts
 import {
   Component,
   OnInit,
-  ViewEncapsulation,
 } from '@angular/core';
 import {
   IMatPanelSelectData,
@@ -56,7 +47,6 @@ import Mock from 'mockjs';
   selector: 'ngx-mat-panel-select-simple',
   templateUrl: './mat-panel-select-simple.component.html',
   styleUrls: ['./mat-panel-select-simple.component.scss'],
-  encapsulation: ViewEncapsulation.None,
 })
 export class MatPanelSelectSimpleComponent implements OnInit {
   data: IMatPanelSelectData[] = Mock.mock({
